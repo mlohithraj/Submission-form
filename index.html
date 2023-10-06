@@ -38,12 +38,27 @@
     
     <script>
         function submssion(event){
-            event.preventDefault();
-            let name= event.target.username.value;
-            let email= event.target.emailId.value;
-            localStorage.setItem('name', name);
-            localStorage.setItem('email', email);
+            // event.preventDefault();
+            // let name= event.target.username.value;
+            // let email= event.target.emailId.value;
+            // localStorage.setItem('name', name);
+            // localStorage.setItem('email', email);
+
+            // let submitting= JSON.parse(localStorage.getItem("name", name));
+
+            // console.log(submitting);
         }
+
+        let Name = JSON.stringify(name);
+        let Emailid = JSON.stringify(email);
+
+        localStorage.setItem("Name", name);
+        localStorage.setItem('email', email);
+
+        let Names= JSON.parse(localStorage.getItem("name", "email"))
+        // let Emails = JSON.parse(localStorage.getItem("email"));
+
+
     </script>
     <script src="main.js"></script>
   </body>
