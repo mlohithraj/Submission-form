@@ -48,19 +48,14 @@
                 name,
                 email
             }
-            let myObj = JSON.stringify(obj);
-
-            localStorage.setItem("obj", myObj);
-
-            let myObj_new= JSON.parse(localStorage.getItem("obj"));
-
-
-            let myObj1 = JSON.stringify(obj);
-
-            localStorage.setItem("obj", myObj);
-
-            let myObj_new1= JSON.parse(localStorage.getItem("obj"));
-
+            localStorage.setItem(obj.email, JSON.stringify(obj));
+            showUserOnScreen(obj);
+        }
+        function showUserOnScreen(obj){
+            const parentElement= document.getElementById('users');
+            const childElement= document.createElement('li');
+            childElement.textContent= obj.name + '-' + obj.email;
+            parentElement.appendChild(childElement);
         }
     </script>
     <script src="main.js"></script>
